@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="br.com.aab.algorithms.BubbleSortTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-02-16T22:54:32" hostname="alemacbookpro.local" time="0.832">
+  <properties/>
+  <testcase name="sortExec_Success" classname="br.com.aab.algorithms.BubbleSortTest" time="0.832"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

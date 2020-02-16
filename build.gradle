@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+wrapper {
+    distributionType = Wrapper.DistributionType.ALL
+}
+
+group 'br.com.aab.algorithms'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.13'
+    testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.6.0'
+    testCompile group: 'org.mockito', name: 'mockito-core', version: '3.2.4'
+    testCompile group: 'org.mockito', name: 'mockito-junit-jupiter', version: '3.2.4'
+}
