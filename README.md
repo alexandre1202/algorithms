@@ -1,1 +1,2 @@
-# algorithms
+# Algorithms
+## Buble Sort
