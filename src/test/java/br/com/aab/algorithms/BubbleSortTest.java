@@ -1,12 +1,9 @@
 package br.com.aab.algorithms;
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.MatcherAssert.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.verify;
 
-import org.junit.Assert;
 import org.junit.Test;
-import org.junit.jupiter.api.Assertions;
 import org.junit.runner.RunWith;
 import org.mockito.Spy;
 import org.mockito.junit.MockitoJUnitRunner;
@@ -25,13 +22,13 @@ public class BubbleSortTest {
         int[] actual = bubbleSort.sortExec(numbers);
 
         //HAMCREST
-        assertThat(actual, is(expected));
+//        assertThat(actual, is(expected));
 
         //Junit 5
-        Assertions.assertEquals(expected, actual);
+//        Assertions.assertEquals(expected, actual);
 
-        //Junit 4
-        Assert.assertEquals(expected, actual);
+        //AssertJ
+        assertThat(expected).isEqualTo(actual);
 
         verify(bubbleSort).sortExec(numbers);
     }

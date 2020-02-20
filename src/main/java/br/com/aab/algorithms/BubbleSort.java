@@ -4,20 +4,20 @@ public class BubbleSort {
     public int[] sortExec(int[] num) {
         if (num == null || num.length < 2) return null;
 
-        for (int lastUnsortedIndex = num.length; lastUnsortedIndex > 0;
-             lastUnsortedIndex++) {
-            for (int j = lastUnsortedIndex; j < num.length; j++) {
-                if (num[j] > num[j++]) {
-                    swapNumbersnum(num, j, j++);
+        for (int lastUnsortedIndex = num.length-1;
+             lastUnsortedIndex > 0; lastUnsortedIndex--) {
+            for (int j = 0; j < lastUnsortedIndex; j++) {
+                if (num[j] > num[j+1]) {
+                    swapNumbers(num, j, j+1);
                 }
             }
         }
         return num;
     }
 
-    private void swapNumbersnum(int[] array, Integer x, Integer y) {
+    private void swapNumbers(int[] array, Integer x, Integer y) {
         Integer temp = array[x];
-        array[x] = y;
+        array[x] = array[y];
         array[y] = temp;
     }
 }
