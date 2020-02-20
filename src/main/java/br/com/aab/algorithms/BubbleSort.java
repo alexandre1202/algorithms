@@ -2,7 +2,9 @@ package br.com.aab.algorithms;
 
 public class BubbleSort {
     public int[] sortExec(int[] num) {
-        if (num == null || num.length < 2) return null;
+        if (num == null) return null;
+
+        if ( num.length < 2 ) return num;
 
         for (int lastUnsortedIndex = num.length-1;
              lastUnsortedIndex > 0; lastUnsortedIndex--) {

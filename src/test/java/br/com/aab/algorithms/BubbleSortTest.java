@@ -23,13 +23,26 @@ public class BubbleSortTest {
 
         //HAMCREST
 //        assertThat(actual, is(expected));
-
         //Junit 5
 //        Assertions.assertEquals(expected, actual);
 
         //AssertJ
         assertThat(expected).isEqualTo(actual);
-
         verify(bubbleSort).sortExec(numbers);
+    }
+
+    @Test
+    public void sortExec_ArrayNull() {
+        int[] actual = bubbleSort.sortExec(null);
+
+        assertThat(actual).isNull();
+    }
+
+    @Test
+    public void sortExec_OnlyOneElement() {
+        int[] expected = {1};
+        int[] actual = bubbleSort.sortExec(new int[] {1});
+
+        assertThat(expected).isEqualTo(actual);
     }
 }
