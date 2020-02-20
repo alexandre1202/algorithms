@@ -29,7 +29,7 @@ Second we can see how *Junit 5* show in a console:
 ![Console](./src/main/resources/assets/junit5.jpeg)
 As you can see here we have expected and actual array, in the same line. And you have to manage to compare the int array in a different way. 
 
-Last example We can how *AssertJ* show in a console:
+In the last example we can see how *AssertJ* show in a console:
 ![Console](./src/main/resources/assets/assertj.jpeg)
 You can compare the expected with the actual int array one line above other aligned by each number. Another interesting point is related to the way AssertJ enable us to compare in a explicit and verbose way to clarify what you are doing. There are many examples of methods for evaluation and assert to be used. 
 Maybe this [Tutorial about AssertJ](https://joel-costigliola.github.io/assertj/assertj-core-quick-start.html) makes sense for you.
