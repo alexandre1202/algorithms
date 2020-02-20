@@ -1,2 +1,13 @@
-.gradle*
-
+*.class
+*.jar
+*.war
+*.ear
+/help/error_hotspot.xml
+hs_err_pid*
+.gradle
+/build/
+gradle-app.setting
+!gradle-wrapper.jar
+.gradletasknamecache
+*.log
+logs/
