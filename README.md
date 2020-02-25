@@ -23,7 +23,7 @@ Talking about algorithms that I have learned:
 * [Java implementation repository](https://github.com/Alexandre1202/algorithms/blob/master/src/main/java/br/com/aab/algorithms/SelectionSort.java)
 ------------------------------------------
 # Unit tests framework comparation
-I code a wrong number in the unit test and I am taking advantage to show you a comparation how each framework show the evaluation or assert in the console.
+In this scenario of a wrong number in the unit test and I am taking advantage to show you to compare how each framework show the evaluation or assert in the console.
 
 First we can see how *Hamcrest* show in a console:
 ![Console](./src/main/resources/assets/hamcrest.jpeg)
