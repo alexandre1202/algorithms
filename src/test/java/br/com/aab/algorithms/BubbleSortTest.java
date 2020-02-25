@@ -8,6 +8,10 @@ import org.junit.runner.RunWith;
 import org.mockito.Spy;
 import org.mockito.junit.MockitoJUnitRunner;
 
+import java.util.ArrayList;
+import java.util.IntSummaryStatistics;
+import java.util.List;
+
 @RunWith(MockitoJUnitRunner.class)
 public class BubbleSortTest {
 
@@ -32,7 +36,7 @@ public class BubbleSortTest {
     }
 
     @Test
-    public void sortExec_ArrayNull() {
+    public void sortExec_whenArrayIsNull() {
         int[] actual = bubbleSort.sortExec(null);
 
         assertThat(actual).isNull();
@@ -40,6 +44,7 @@ public class BubbleSortTest {
 
     @Test
     public void sortExec_OnlyOneElement() {
+
         int[] expected = {1};
         int[] actual = bubbleSort.sortExec(new int[] {1});
 
