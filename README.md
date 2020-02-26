@@ -6,6 +6,7 @@ If you are wondering about them try on the unit test in this [repo](https://gith
 ### [Java 8 download link](https://www.oracle.com/webapps/redirect/signon?nexturl=https://download.oracle.com/otn/java/jdk/8u241-b07/1f5b5a70bf22433b84d0e960903adac8/jdk-8u241-macosx-x64.dmg)
 ### [IntelliJ download link](https://www.jetbrains.com/education/download/download-thanks.html?platform=mac)
 Run IntelliJ and open this project with IntelliJ. In IntelliJ select the name of the project **algorithms** and click on File / Project structure Menu and you will see some configurations. 
+
 Configure them as following:
 ![Project](./src/main/resources/assets/project.jpeg)
 ![Modules](./src/main/resources/assets/modules.jpeg)
@@ -41,4 +42,5 @@ As you can see here we have expected and actual array, in the same line. And you
 In the last example we can see how *AssertJ* show in a console:
 ![Console](./src/main/resources/assets/assertj.jpeg)
 You can compare the expected with the actual int array one line above other aligned by each number. Another interesting point is related to the way AssertJ enable us to compare in a explicit and verbose way to clarify what you are doing when using ```.isEqualTo(...)```. There are many examples of methods for evaluation and assert to be used. 
+
 Maybe this [Tutorial about AssertJ](https://joel-costigliola.github.io/assertj/assertj-core-quick-start.html) makes sense for you.
