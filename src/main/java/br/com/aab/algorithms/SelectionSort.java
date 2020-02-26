@@ -12,7 +12,8 @@ public class SelectionSort {
 
             int largest = 0;
             for (int i = 1; i <= lastUnsortedIndex; i++) {
-                if (nums[i] > nums[largest]) {
+                if (nums[i] > nums[largest
+                        ]) {
                     largest = i;
                 }
             }

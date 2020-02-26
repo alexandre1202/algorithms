@@ -16,11 +16,15 @@ Run IntelliJ and open this project with IntelliJ. In IntelliJ select the name of
 ```
 ------------------------------------------
 Talking about algorithms that I have learned: 
-* [Buble Sort](https://en.wikipedia.org/wiki/Bubble_sort)  
+------------------------------------------
+* [Buble Sort wikipedia](https://en.wikipedia.org/wiki/Bubble_sort)  
 * [Java implementation repository](https://github.com/Alexandre1202/algorithms/blob/master/src/main/java/br/com/aab/algorithms/BubbleSort.java)
 ------------------------------------------
-* [Selection Sort](https://en.wikipedia.org/wiki/Selection_sort)
+* [Selection Sort wikipedia](https://en.wikipedia.org/wiki/Selection_sort)
 * [Java implementation repository](https://github.com/Alexandre1202/algorithms/blob/master/src/main/java/br/com/aab/algorithms/SelectionSort.java)
+------------------------------------------
+* [Insertion Sort wikipedia](https://en.wikipedia.org/wiki/Insertion_sort)
+* [Java implementation repository](https://github.com/Alexandre1202/algorithms/blob/master/src/main/java/br/com/aab/algorithms/InsertionSort.java)
 ------------------------------------------
 # Unit tests framework comparation
 In this scenario of a wrong number in the unit test and I am taking advantage to show you to compare how each framework show the evaluation or assert in the console.
