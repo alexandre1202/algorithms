@@ -8,6 +8,7 @@ If you are wondering about them try on the unit test in this [repo](https://gith
 Run IntelliJ and open this project with IntelliJ. In IntelliJ select the name of the project **algorithms** and click on File / Project structure Menu and you will see some configurations. 
 
 Configure them as following:
+
 ![Project](./src/main/resources/assets/project.jpeg)
 ![Modules](./src/main/resources/assets/modules.jpeg)
 ![Libraries](./src/main/resources/assets/libraries.jpeg)

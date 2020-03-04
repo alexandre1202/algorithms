@@ -50,4 +50,14 @@ public class BubbleSortTest {
 
         assertThat(expected).isEqualTo(actual);
     }
+
+    @Test
+    public void sortExec_ArrayAlreadySorted() {
+
+        int[] expected = {-22, -15, 1, 7, 20, 35, 55};
+        int[] actual = bubbleSort.sortExec(expected);
+
+        assertThat(expected).isEqualTo(actual);
+    }
+
 }
