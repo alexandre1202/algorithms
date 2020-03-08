@@ -9,7 +9,6 @@ import org.mockito.junit.MockitoJUnitRunner;
 @RunWith(MockitoJUnitRunner.class)
 public class ArraysChallengesTest {
 
-    @Spy
     ArraysChallenges arraysChallenges;
 
     @Test
