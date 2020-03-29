@@ -1,4 +1,4 @@
-# Couple of examples of Java algorithm applications using Gradle, Mockito, JUnit 5, AssertJ in IntelliJ
+# Couple of Java algorithm applications using Gradle, Mockito, JUnit 5, AssertJ in IntelliJ
 If you are wondering about them try on the unit test in this [repo](https://github.com/Alexandre1202/algorithms) in src directory 
 ## Set up for MacOS
 ### [Git installation](https://gist.github.com/derhuerst/1b15ff4652a867391f03#file-mac-md)
