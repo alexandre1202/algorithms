@@ -5,6 +5,14 @@ import java.util.LinkedList;
 public class Main {
 
   public static void main(String[] args) {
+
+    int number1 = 5;
+    int number2 = 10;
+    System.out.println("number1 % number2 = " + number1 % number2);
+    System.out.println("number1 / number2 = " + number1 / number2);
+
+    System.exit(0);
+
     System.out.println("<<<<< Palindrome with Array >>>>>");
     System.out.println(new Main().isPalindrome("Natan"));
     System.out.println(new Main().isPalindrome("I did did I"));
