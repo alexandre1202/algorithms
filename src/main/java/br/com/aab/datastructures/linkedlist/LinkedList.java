@@ -2,15 +2,27 @@ package br.com.aab.datastructures.linkedlist;
 
 public class LinkedList<T extends Comparable<T>> implements List<T> {
 
-  private Node<T> root;
+  private Node<T> head;
   private int sizeOfList;
+
+  @Override
+  public Node<T> getMiddleNode() {
+    Node<T> fastPointer = head;
+    Node<T> slowPointer = head;
+
+    while(fastPointer.getNextNode() != null && fastPointer.getNextNode().getNextNode() != null) {
+      fastPointer = fastPointer.getNextNode().getNextNode();
+      slowPointer = slowPointer.getNextNode();
+    }
+    return slowPointer;
+  }
 
   @Override
   public void insert(T data) {
     ++this.sizeOfList;
 
-    if (root == null) {
-      this.root = new Node<>(data);
+    if (head == null) {
+      this.head = new Node<>(data);
     } else {
       insertDataAtBeginning(data);
     }
@@ -19,8 +31,8 @@ public class LinkedList<T extends Comparable<T>> implements List<T> {
   //O(1)
   private void insertDataAtBeginning(T data) {
     Node<T> newNode = new Node<>(data);
-    newNode.setNextNode(root);
-    this.root = newNode;
+    newNode.setNextNode(head);
+    this.head = newNode;
   }
 
   //O(N)
@@ -37,10 +49,10 @@ public class LinkedList<T extends Comparable<T>> implements List<T> {
   public void remove(T data) {
     --this.sizeOfList;
 
-    if (this.root.getData().compareTo(data) == 0) {
-      this.root = this.root.getNextNode();
+    if (this.head.getData().compareTo(data) == 0) {
+      this.head = this.head.getNextNode();
     } else {
-      remove(data, root, root.getNextNode());
+      remove(data, head, head.getNextNode());
     }
   }
 
@@ -59,8 +71,8 @@ public class LinkedList<T extends Comparable<T>> implements List<T> {
 
   @Override
   public void traverseList() {
-    if (this.root == null) return;
-    Node<T> actualNode = this.root;
+    if (this.head == null) return;
+    Node<T> actualNode = this.head;
     while (actualNode != null) {
       System.out.print(actualNode + " -> ");
       actualNode = actualNode.getNextNode();
