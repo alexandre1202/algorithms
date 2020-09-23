@@ -35,7 +35,8 @@ public class BinarySearchTreeTest {
         assertThat(binarySearchTree.getMinValue()).isEqualTo(-22);
     }
 
-//    @Test
-//    void traversal() {
-//    }
+    @Test
+    public void traversal() {
+        binarySearchTree.traversal();
+    }
 }
