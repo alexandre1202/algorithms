@@ -8,41 +8,38 @@ import java.util.*;
 
 public class ArrayManipulation {
 
-    public static void main(String[] args) {
-        int n = 10; int[][] queries = {{1, 5, 3}, {4, 8, 7}, {6, 9, 1}};               // R = 10
-//        int n = 5; int[][] queries = {{1, 2, 100}, {2, 5, 100}, {3, 4, 100}};          // R = 200
-//        int n = 10; int[][] queries = {{2, 6, 8}, {3, 5, 7}, {1, 8, 1}, {5, 9, 15}};   // R = 31
-        System.out.println("R = " + arrayManipulation(n, queries));
-
-
-    }
+//    public static void main(String[] args) {
+//        int n = 10; int[][] queries = {{1, 5, 3}, {4, 8, 7}, {6, 9, 1}};               // R = 10
+////        int n = 5; int[][] queries = {{1, 2, 100}, {2, 5, 100}, {3, 4, 100}};          // R = 200
+////        int n = 10; int[][] queries = {{2, 6, 8}, {3, 5, 7}, {1, 8, 1}, {5, 9, 15}};   // R = 31
+//        System.out.println("R = " + arrayManipulation(n, queries));
+//    }
 
     // Queries = [[1,5,3],[4,8,7],[6,9,1]] and n = 10
 
     //First step  [1,5,3],[6,10,0]
     //Second step [1,3,3],[4,5,10],[6,8,7],[9,10,0]
     //Third step  [1,3,3],[4,5,10],[6,8,8],[9,9,1],[10,10,0]
+
     static long arrayManipulation(int n, int[][] queries) {
-        int queryLength = queries.length;
-        long [] arrayAux = new long[n + 1];
-        long maxResult = 0;
-        long totalResult = 0;
-
-        while (queryLength-- > 0) {
-            int a = queries[queryLength][0];
-            int b = queries[queryLength][1];
-            int k = queries[queryLength][2];
-            arrayAux[a-1] += k;
-            arrayAux[b] -= k;
+        int m = queries.length;
+        long finalResult = 0;
+        long[] mainElements = new long[n+1];
+        while (m-- >0) {
+            int a = queries[m][0];
+            int b = queries[m][1];
+            long k = queries[m][2];
+            mainElements[a-1] += k;
+            mainElements[b] -= k;
         }
-        for (int i = 0; i < n; i++) {
-            totalResult += arrayAux[i];
-            maxResult = Math.max(maxResult, totalResult);
+        long sum = 0;
+        for (int x = 0; x < n; x++) {
+            sum += mainElements[x];
+            finalResult = Math.max(finalResult, sum);
         }
-        return maxResult;
+        return finalResult;
     }
-
-
+    
     static List<QueriesArraysManipulation> buildArraysManipulation(int[][] queries) {
         List<QueriesArraysManipulation> arraysManipulationsList = new ArrayList<>();
         for (int i = 0; i < queries.length; i++) {
@@ -74,7 +71,7 @@ public class ArrayManipulation {
         }
     }
 
-    public static void main2(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException {
         //R = 7.542.539.201
         //W = 2.147.483.639
 
