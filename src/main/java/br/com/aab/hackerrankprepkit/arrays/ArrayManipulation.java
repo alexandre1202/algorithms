@@ -21,7 +21,15 @@ public class ArrayManipulation {
     //Second step [1,3,3],[4,5,10],[6,8,7],[9,10,0]
     //Third step  [1,3,3],[4,5,10],[6,8,8],[9,9,1],[10,10,0]
 
+//    final Comparator<QueriesArraysManipulation> COMPARATOR =
+//            Comparator.comparingInt((QueriesArraysManipulation qam) -> qam.a)
+//            .thenComparing(qa -> qa.b);
+
+//    static final Comparator<QueriesArraysManipulation> COMPARATOR_QAM_HASH_CODE =
+//            Comparator.comparingInt(o -> o.hashCode());
+
     static long arrayManipulation(int n, int[][] queries) {
+        //List<QueriesArraysManipulation> list = buildArraysManipulation(queries);
         int m = queries.length;
         long finalResult = 0;
         long[] mainElements = new long[n+1];
@@ -39,16 +47,20 @@ public class ArrayManipulation {
         }
         return finalResult;
     }
-    
-    static List<QueriesArraysManipulation> buildArraysManipulation(int[][] queries) {
-        List<QueriesArraysManipulation> arraysManipulationsList = new ArrayList<>();
-        for (int i = 0; i < queries.length; i++) {
-            arraysManipulationsList.add(new QueriesArraysManipulation(queries[i][0], queries[i][1],
-                    (long) queries[i][2]) );
-        }
-        Collections.sort(arraysManipulationsList);
-        return arraysManipulationsList;
-    }
+
+//    public int compareTo(QueriesArraysManipulation qam) {
+//        return COMPARATOR.compare(this, qam);
+//    }
+
+//    static List<QueriesArraysManipulation> buildArraysManipulation(int[][] queries) {
+//        List<QueriesArraysManipulation> arraysManipulationsList = new ArrayList<>();
+//        for (int i = 0; i < queries.length; i++) {
+//            arraysManipulationsList.add(new QueriesArraysManipulation(queries[i][0], queries[i][1],
+//                    (long) queries[i][2]) );
+//        }
+//        Collections.sort(arraysManipulationsList);
+//        return arraysManipulationsList;
+//    }
 
     static class QueriesArraysManipulation implements Comparable<QueriesArraysManipulation>{
         int a;
