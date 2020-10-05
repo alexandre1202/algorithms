@@ -34,4 +34,19 @@ public class ReversingLettersAndWordsTest {
         assertThat(reversingLettersAndWords.reversingLetters())
                 .isNotEmpty();
     }
+
+    @Test
+    public void testReverseWords() {
+        //words reverted
+        assertThat(reversingLettersAndWords.reverseWords())
+                .isEqualTo("essa eh frase minha a");
+    }
+
+    @Test
+    public void testReverseWordsFunctional() {
+        //words and letters inverted
+        assertThat(reversingLettersAndWords.reverseWordsFunctional())
+                .isEqualTo("aahnimesarfheasse");
+
+    }
 }
