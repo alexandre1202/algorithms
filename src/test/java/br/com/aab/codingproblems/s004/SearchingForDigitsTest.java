@@ -1,24 +1,43 @@
 package br.com.aab.codingproblems.s004;
 
-import org.assertj.core.api.Assertions;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.junit.MockitoJUnitRunner;
 
+import static br.com.aab.codingproblems.s004.SearchingForDigits.*;
+import static java.lang.Boolean.TRUE;
+import static org.assertj.core.api.Assertions.assertThat;
+
 @RunWith(MockitoJUnitRunner.class)
 public class SearchingForDigitsTest {
 
-    private SearchingForDigits searchingForDigits;
-    private String params = "dsflkhasflkjh149782314987131342987asdifhsalkjfh1239y";
-
-    @Before
-    public void init() {
-        searchingForDigits = new SearchingForDigits(params);
+    @Test
+    public void testContainAnyDigits() {
+        String params = "dsflkhasflkjh149782314987131342987asdifhsalkjfh1239y";
+        assertThat(containAnyDigits(params)).isEqualTo(TRUE);
     }
 
     @Test
-    public void testHasDigitV1() {
-        Assertions.assertThat(searchingForDigits.hasDigitV1()).isEqualTo(Boolean.TRUE);
+    public void testContainOnlyDigits() {
+        String params = "9742934792384";
+        assertThat(containOnlyDigits(params)).isEqualTo(TRUE);
+    }
+
+    @Test
+    public void testContainOnlyAlphaNumeric() {
+        String params = "974293adlfkjasldfj4792384ADSAF";
+        assertThat(containOnlyAlphaNumeric(params)).isEqualTo(TRUE);
+    }
+
+    @Test
+    public void testContainOnlyNotAlphaNumeric() {
+        String params = "çáóíêîâ";
+        assertThat(containOnlyNotAlphaNumeric(params)).isEqualTo(TRUE);
+    }
+
+    @Test
+    public void testDontContainWhiteSpace() {
+        String params = "alexandreantoniobarbosa";
+        assertThat(dontContainWhiteSpace(params));
     }
 }
