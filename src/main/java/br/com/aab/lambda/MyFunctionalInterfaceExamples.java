@@ -4,6 +4,8 @@ import java.util.function.Function;
 
 public class MyFunctionalInterfaceExamples {
 
+    // Reference : https://www.tutorialspoint.com/how-to-implement-function-t-r-interface-with-lambda-expression-in-java
+    
     public Integer addingTwoValues(Integer a, Integer b) {
         Function<Integer, Integer> result = i -> i + b;
         return result.apply(a);
