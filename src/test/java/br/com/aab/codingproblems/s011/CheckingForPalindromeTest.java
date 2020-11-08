@@ -4,8 +4,6 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 
-import static org.junit.Assert.*;
-
 public class CheckingForPalindromeTest {
 
     private CheckingForPalindrome checkingForPalindrome;
@@ -18,21 +16,43 @@ public class CheckingForPalindromeTest {
     @Test
     public void testIsPalindrome() {
         String expected = "Madam";
-        boolean result = checkingForPalindrome.isPalindrome(expected);
+        boolean result = checkingForPalindrome.isPalindromeVerboseVersion(expected);
         Assertions.assertTrue(result);
     }
 
     @Test
     public void testIsNotPalindrome() {
         String expected = "Alexandre";
-        boolean result = checkingForPalindrome.isPalindrome(expected);
+        boolean result = checkingForPalindrome.isPalindromeVerboseVersion(expected);
         Assertions.assertFalse(result);
     }
 
     @Test
     public void testIsPalindromeWithNumbers() {
         String expected = "32123";
-        boolean result = checkingForPalindrome.isPalindrome(expected);
+        boolean result = checkingForPalindrome.isPalindromeVerboseVersion(expected);
         Assertions.assertTrue(result);
     }
+
+    @Test
+    public void testIsPalindromeSB() {
+        String expected = "Madam";
+        boolean result = checkingForPalindrome.isPalindromeWithStringBuilder(expected);
+        Assertions.assertTrue(result);
+    }
+
+    @Test
+    public void testIsNotPalindromeSB() {
+        String expected = "Alexandre";
+        boolean result = checkingForPalindrome.isPalindromeWithStringBuilder(expected);
+        Assertions.assertFalse(result);
+    }
+
+    @Test
+    public void testIsPalindromeWithNumbersSB() {
+        String expected = "32123";
+        boolean result = checkingForPalindrome.isPalindromeWithStringBuilder(expected);
+        Assertions.assertTrue(result);
+    }
+
 }
