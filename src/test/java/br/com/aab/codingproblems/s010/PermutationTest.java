@@ -4,9 +4,10 @@ import org.assertj.core.api.Assertions;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
+
+import static java.util.Arrays.asList;
 
 public class PermutationTest {
 
@@ -20,7 +21,7 @@ public class PermutationTest {
     @Test
     public void testPermute() {
         String wordToBePermuted = "GABY";
-        Set<String> expected = new HashSet<>(Arrays.asList("GAYB", "GBYA", "BYAG", "BGAY", "AYBG", "AGBY", "YGBA",
+        Set<String> expected = new HashSet<>(asList("GAYB", "GBYA", "BYAG", "BGAY", "AYBG", "AGBY", "YGBA",
                 "YABG", "YGAB", "YBAG", "YAGB", "YBGA", "ABGY", "AYGB", "BYGA", "BAGY", "GABY", "GYBA", "ABYG",
                 "AGYB", "GBAY", "GYAB", "BGYA", "BAYG"));
         Set<String> result = permutation.permute(wordToBePermuted);
