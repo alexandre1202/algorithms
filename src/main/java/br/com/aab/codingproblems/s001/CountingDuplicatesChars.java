@@ -24,4 +24,19 @@ public class CountingDuplicatesChars {
         return this.params.chars().mapToObj(c -> (char) c)
                        .collect(Collectors.groupingBy(c -> c, Collectors.counting()));
     }
+
+    public Map<Character, Long> count3WithStream() {
+        return this.params.chars()
+                .mapToObj(c -> (char) c)
+                .collect(Collectors.groupingBy(c -> c, Collectors.counting()));
+    }
+
+    public Map<Character, Long> count3WithoutStream() {
+        Map<Character, Long> result = new HashMap<>();
+        char[] charArray = this.params.toCharArray();
+        for (char c : charArray) {
+            result.compute(c, (k, v) -> v == null ? 1 : ++v);
+        }
+        return result;
+    }
 }

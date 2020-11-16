@@ -23,28 +23,36 @@ public class CountingDuplicatesCharsTest {
     @Test
     public void testCount1IsNotNull() {
         Map<Character, Long> map = countingDuplicatesChars.count1();
-        System.out.println("map = " + map);
         assertThat(map).isNotNull();
     }
 
     @Test
     public void testCount1WithLetterE() {
         Map<Character, Long> map = countingDuplicatesChars.count1();
-        System.out.println("map = " + map);
         assertThat(map).extractingByKey('e').isEqualTo(7L);
     }
 
     @Test
     public void testCount2IsNotNull() {
         Map<Character, Long> map = countingDuplicatesChars.count2();
-        System.out.println("map = " + map);
         assertThat(map).isNotNull();
     }
 
     @Test
     public void testCount2WithLetterE() {
         Map<Character, Long> map = countingDuplicatesChars.count2();
-        System.out.println("map = " + map);
         assertThat(map).extractingByKey('a').isEqualTo(5L);
+    }
+
+    @Test
+    public void testCount3WithLetterO() {
+        Map<Character, Long> map = countingDuplicatesChars.count3WithStream();
+        assertThat(map).extractingByKey('o').isEqualTo(5L);
+    }
+
+    @Test
+    public void testCount3WithLetter0UsingStream() {
+        Map<Character, Long> map = countingDuplicatesChars.count3WithoutStream();
+        assertThat(map).extractingByKey('o').isEqualTo(5L);
     }
 }

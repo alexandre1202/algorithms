@@ -29,4 +29,13 @@ public class RemovingOneCharacterTest {
         String result = removingOneCharacter.removingOneCharacterUsingFS(words, 'x');
         assertThat(result).isEqualTo(expected);
     }
+
+    @Test
+    public void testRemovingOneCharacterUsingCodePoints() {
+        String words = "Alexandre Antonio Barbosa";
+        String expected = "Aleandre Antonio Barbosa";
+        String result = removingOneCharacter.removingOneCharacterUsingCodePoints(words, 'x');
+        assertThat(result).isEqualTo(expected);
+    }
+
 }

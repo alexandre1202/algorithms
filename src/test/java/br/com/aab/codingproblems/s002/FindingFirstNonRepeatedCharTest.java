@@ -14,7 +14,7 @@ public class FindingFirstNonRepeatedCharTest {
     public void testFindLetterC() {
         String param = "AABBCDDEEFF";
         findingFirstNonRepeatedChar = new FindingFirstNonRepeatedChar(param);
-        String foundChar = findingFirstNonRepeatedChar.find();
+        String foundChar = findingFirstNonRepeatedChar.findV1();
         Assertions.assertThat(foundChar).isEqualTo("C");
     }
 
@@ -22,7 +22,16 @@ public class FindingFirstNonRepeatedCharTest {
     public void testFindNumberSeven() {
         String param = "11223344556678899";
         findingFirstNonRepeatedChar = new FindingFirstNonRepeatedChar(param);
-        String foundChar = findingFirstNonRepeatedChar.find();
+        String foundChar = findingFirstNonRepeatedChar.findV1();
         Assertions.assertThat(foundChar).isEqualTo("7");
     }
+
+    @Test
+    public void testFindLetterXUsingV2() {
+        String param = "AABBCCDDEEFFXZZ";
+        findingFirstNonRepeatedChar = new FindingFirstNonRepeatedChar(param);
+        String foundChar = findingFirstNonRepeatedChar.findV2();
+        Assertions.assertThat(foundChar).isEqualTo("X");
+    }
+
 }

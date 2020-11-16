@@ -50,4 +50,8 @@ public class ReversingLettersAndWords {
                        .map(w -> new StringBuilder(w).reverse())
                        .collect(Collectors.joining());
     }
+
+    public String reverseLettersV2() {
+        return new StringBuilder(this.params).reverse().toString();
+    }
 }

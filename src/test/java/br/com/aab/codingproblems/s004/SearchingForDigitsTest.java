@@ -40,4 +40,11 @@ public class SearchingForDigitsTest {
         String params = "alexandreantoniobarbosa";
         assertThat(dontContainWhiteSpace(params));
     }
+
+    @Test
+    public void testContainAnyDigitsV2() {
+        String params = "qualquer9digito";
+        assertThat(containAnyDigits(params)).isEqualTo(TRUE);
+    }
+
 }

@@ -14,4 +14,12 @@ public class RemovingOneCharacter {
                        .mapToObj(c -> String.valueOf((char) c))
                        .collect(Collectors.joining());
     }
+
+    public String removingOneCharacterUsingCodePoints(String words, char charToRemove) {
+        int charToRemoveCodepoints = String.valueOf(charToRemove).codePointAt(0);
+        return words.codePoints()
+                       .filter(c -> c != charToRemoveCodepoints)
+                       .mapToObj(c -> String.valueOf((char)c))
+                       .collect(Collectors.joining());
+    }
 }

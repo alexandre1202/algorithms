@@ -49,4 +49,11 @@ public class ReversingLettersAndWordsTest {
                 .isEqualTo("aahnimesarfheasse");
 
     }
+
+    @Test
+    public void testReserveLettersUsingV1() {
+        reversingLettersAndWords = new ReversingLettersAndWords("asrevni medro me osnep ue");
+        assertThat(reversingLettersAndWords.reverseLettersV2())
+                .isEqualTo("eu penso em ordem inversa");
+    }
 }
