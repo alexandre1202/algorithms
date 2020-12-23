@@ -43,4 +43,13 @@ public class CountingVowelsAndConsonants {
                             .collect(partitioningBy(c -> vogais.contains(c), counting()));
         return Pair.of(result.get(true), result.get(false));
     }
+
+    public static PairVC<Long, Long> countVogaisEConsoantes(String words) {
+        words = words.toLowerCase();
+        Map<Boolean, Long> result = words.chars()
+                .mapToObj(c -> (char)c)
+                .filter(c -> c >= 'a' && c <= 'z')
+                .collect(partitioningBy(c -> vogais.contains(c), counting()));
+        return PairVC.of(result.get(true), result.get(false));
+    }
 }

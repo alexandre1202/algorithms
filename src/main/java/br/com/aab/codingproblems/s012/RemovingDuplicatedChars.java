@@ -3,9 +3,8 @@ package br.com.aab.codingproblems.s012;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
-import java.util.stream.Collectors;
 
-import static java.util.stream.Collectors.*;
+import static java.util.stream.Collectors.joining;
 
 public class RemovingDuplicatedChars {
     public String removingDuplicatedCharsSB(String word) {
