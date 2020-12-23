@@ -29,7 +29,7 @@ Talking about algorithms that I have learned:
 * [Insertion Sort wikipedia](https://en.wikipedia.org/wiki/Insertion_sort)
 * [Java implementation](https://github.com/Alexandre1202/algorithms/blob/master/src/main/java/br/com/aab/algorithms/InsertionSort.java)
 ------------------------------------------
-* [Breadth First Search](https://en.wikipedia.org/wiki/Breadth-first_search)
+* [Breadth First Search wikipedia](https://en.wikipedia.org/wiki/Breadth-first_search)
 * [Java implementation](https://github.com/Alexandre1202/algorithms/blob/master/src/main/java/br/com/aab/algorithms/BreadthFirstSearch.java)
 ------------------------------------------
 * How to add a number for an array without java.lang.String. For example:
