@@ -14,9 +14,7 @@ public class CharConcatenate {
         return result;
     }
 
-    public String buildStringV2(Character character, int occurences) {
-        String format = "%" + occurences + "s";
-        String initial = String.format(format, " ");
-        return initial.replace(' ', character);
+    public String buildStringV2(Character character, int nTimes) {
+        return String.format("%" + nTimes + "s", " ").replace(' ', character);
     }
 }
