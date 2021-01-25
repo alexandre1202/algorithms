@@ -1,13 +1,14 @@
 package br.com.aab.interviewquestions;
 
 import br.com.aab.interviewquestions.model.Person;
-import org.assertj.core.api.Assertions;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.junit.MockitoJUnitRunner;
 
 import java.util.HashMap;
 import java.util.HashSet;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(MockitoJUnitRunner.class)
 public class BasicHashFundationTest {
@@ -24,7 +25,9 @@ public class BasicHashFundationTest {
         basicHashFundation = new BasicHashFundation(persons);
         HashSet<Person> hashSet = basicHashFundation.execHashSetAdd();
 
-        Assertions.assertThat(hashSet).isNotEmpty();
+        assertThat(hashSet).isNotEmpty();
+        assertThat(hashSet).hasSize(3);
+        assertThat(hashSet).extracting(Person::getName).containsExactlyInAnyOrder("Jose", "Joao", "Maria");
     }
 
     @Test
@@ -37,6 +40,6 @@ public class BasicHashFundationTest {
         basicHashFundation = new BasicHashFundation(persons);
         HashMap<Integer, Person> hashMap = basicHashFundation.execHashMapPut();
 
-        Assertions.assertThat(hashMap).isNotEmpty();
+        assertThat(hashMap).isNotEmpty();
     }
 }

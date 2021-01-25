@@ -1,5 +1,7 @@
 package br.com.aab.interviewquestions.model;
 
+import java.util.Objects;
+
 public class Person {
     private int id;
     private String name;
@@ -36,7 +38,6 @@ public class Person {
 
     @Override
     public int hashCode() {
-//            return Objects.hash(id, name);
-        return 1;
+            return Objects.hash(id, name);
     }
 }
