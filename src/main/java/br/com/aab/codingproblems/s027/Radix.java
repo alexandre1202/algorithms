@@ -18,7 +18,5 @@ public class Radix {
         System.out.println("parseUnsignedInt(nri, 13) = " + parseUnsignedInt(nri, 13));
         System.out.println("parseUnsignedInt(nri, 14) = " + parseUnsignedInt(nri, 14));
         System.out.println("parseUnsignedInt(nri, 15) = " + parseUnsignedInt(nri, 15));
-
-        //BinaryOperator<BigDecimal> bigDecimalBinaryOperator = ();
     }
 }
