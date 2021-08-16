@@ -2,13 +2,10 @@ package br.com.aab.codingproblems.s002;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
-import java.util.function.Function;
-import java.util.stream.Collectors;
 
-import static java.lang.Character.*;
-import static java.util.function.Function.*;
+import static java.lang.Character.MIN_VALUE;
+import static java.lang.Character.toChars;
 import static java.util.function.Function.identity;
-import static java.util.stream.Collectors.*;
 import static java.util.stream.Collectors.counting;
 import static java.util.stream.Collectors.groupingBy;
 
