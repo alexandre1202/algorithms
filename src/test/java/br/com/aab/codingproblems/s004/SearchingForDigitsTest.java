@@ -5,6 +5,7 @@ import org.junit.runner.RunWith;
 import org.mockito.junit.MockitoJUnitRunner;
 
 import static br.com.aab.codingproblems.s004.SearchingForDigits.*;
+import static java.lang.Boolean.FALSE;
 import static java.lang.Boolean.TRUE;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -13,8 +14,14 @@ public class SearchingForDigitsTest {
 
     @Test
     public void testContainAnyDigits() {
-        String params = "dsflkhasflkjh149782314987131342987asdifhsalkjfh1239y";
+        String params = "149782314987131342987";
         assertThat(containAnyDigits(params)).isEqualTo(TRUE);
+    }
+
+    @Test
+    public void testDoesNotContainOnlyDigits() {
+        String params = "dsflkhasflkjh14978231498713134298ººº7asdifhsalkjfh1239y";
+        assertThat(containAnyDigits(params)).isEqualTo(FALSE);
     }
 
     @Test
@@ -40,11 +47,4 @@ public class SearchingForDigitsTest {
         String params = "alexandreantoniobarbosa";
         assertThat(dontContainWhiteSpace(params));
     }
-
-    @Test
-    public void testContainAnyDigitsV2() {
-        String params = "qualquer9digito";
-        assertThat(containAnyDigits(params)).isEqualTo(TRUE);
-    }
-
 }

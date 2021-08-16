@@ -3,7 +3,7 @@ package br.com.aab.codingproblems.s004;
 public class SearchingForDigits {
 
     public static boolean containAnyDigits(String param) {
-        return param.chars().anyMatch(d -> Character.isDigit(d));
+        return !param.chars().anyMatch(d -> !Character.isDigit(d));
     }
 
     public static boolean containOnlyDigits(String param) {

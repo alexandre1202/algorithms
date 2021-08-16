@@ -1,10 +1,8 @@
-package br.com.aab.random;
+package br.com.aab.functionalprogramming;
 
 import org.assertj.core.api.Assertions;
 import org.junit.Before;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class NumberConverterTest {
 

@@ -1,4 +1,4 @@
-package br.com.aab.random;
+package br.com.aab.functionalprogramming;
 
 public class NumberConverter {
     public String decimalToBinary(int decimal) {

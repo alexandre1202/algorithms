@@ -1,6 +1,5 @@
-package br.com.aab.random;
+package br.com.aab.functionalprogramming;
 
-import java.util.Arrays;
 import java.util.Random;
 
 public class MyRandomNumbers {
