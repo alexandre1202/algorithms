@@ -2,6 +2,7 @@ package br.com.aab.hackerrankprepkit.arrays;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -21,6 +22,14 @@ public class SparseArrays {
         return result;
     }
 
+    public static List<Integer> matchingStringsLinkedList(List<String> strings, List<String> queries) {
+        List<Integer> result = new LinkedList<>();
+        for (String q : queries) {
+            Long count = strings.stream().filter(s -> q.equals(s)).count();
+            result.add(count.intValue());
+        }
+        return result;
+    }
     public static List<Integer> matchingStringsFast(List<String> strings, List<String> queries) {
         return queries.stream()
                 .mapToInt(q -> (int) (strings.stream().filter(s -> q.equals(s)).count()))
@@ -37,5 +46,11 @@ public class SparseArrays {
         System.out.println(format("matchingStringsFast(strings, queries) [%s] in [%d] ms",
                 matchingStringsFast(strings,queries),
                 (System.currentTimeMillis() - start)));
+
+        start = System.currentTimeMillis();
+        System.out.println(format("matchingStringsLinkedList(strings, queries) [%s] in [%d] ms",
+                matchingStringsLinkedList(strings,queries),
+                (System.currentTimeMillis() - start)));
+
     }
 }
