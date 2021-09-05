@@ -1,19 +1,15 @@
 package br.com.aab.interviewquestions;
 
 public class NumberInverter {
-    private int number;
-    public NumberInverter(int number) {
-        this.number = number;
-    }
+   public static int numberInverter(final int param) {
+      int input = param < 0 ? param * -1 : param;
+      int modValue, result = 0;
 
-    public int exec() {
-        int a = 0;
-        int b;
-        do {
-            b = this.number % 10;
-            a = a * 10 + b;
-            this.number /= 10;
-        } while(this.number > 0);
-        return a;
-    }
+      do {
+         modValue = input % 10;
+         result = result * 10 + modValue;
+         input /= 10;
+      } while (input > 0);
+      return param < 0 ? result * -1 : result;
+   }
 }

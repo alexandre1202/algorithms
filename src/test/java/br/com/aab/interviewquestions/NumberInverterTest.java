@@ -1,23 +1,19 @@
 package br.com.aab.interviewquestions;
 
 import org.assertj.core.api.Assertions;
-import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static br.com.aab.interviewquestions.NumberInverter.numberInverter;
 
 public class NumberInverterTest {
 
-    private NumberInverter inverter;
-
-    @Before
-    public void setUp() throws Exception {
-        inverter = new NumberInverter(123);
-    }
-
     @Test
-    public void exec() {
-        int result = inverter.exec();
-        Assertions.assertThat(result).isEqualTo(321);
+    public void testNumber() {
+        Assertions.assertThat(321).isEqualTo(numberInverter(123));
+        Assertions.assertThat(47932).isEqualTo(numberInverter(23974));
+        Assertions.assertThat(754389).isEqualTo(numberInverter(983457));
+        Assertions.assertThat(-754389).isEqualTo(numberInverter(-983457));
+        Assertions.assertThat(-321).isEqualTo(numberInverter(-123));
+        Assertions.assertThat(0).isEqualTo(numberInverter(0));
     }
 }
