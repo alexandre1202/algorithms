@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 
 public class LRU {
     public List<Integer> getCachedValues(int[] pages, int capacity) {
-        Queue<Integer> cache = new LinkedList<>();
+        final Queue<Integer> cache = new LinkedList<>();
         for (int i = 0; i < pages.length; i++) {
             final int entry = pages[i];
             if (cache.size() < capacity) {

@@ -1,13 +1,8 @@
 package br.com.aab.codingproblems.s027;
 
-import java.math.BigDecimal;
-import java.util.Arrays;
-import java.util.function.BinaryOperator;
-
-import static java.lang.Integer.*;
+import static java.lang.Integer.parseUnsignedInt;
 
 public class Radix {
-
 
     public static void main(String[] args) {
         String nri = "255500";

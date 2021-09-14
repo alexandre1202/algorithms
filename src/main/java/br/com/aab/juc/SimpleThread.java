@@ -1,7 +1,10 @@
 package br.com.aab.juc;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 public class SimpleThread {
     private int counter;
+    private AtomicInteger atomicInteger = new AtomicInteger(0);
     public static void main(String[] args) {
         new SimpleThread().exec();
     }
@@ -10,14 +13,14 @@ public class SimpleThread {
         Thread t1 = new Thread(new Runnable() {
             @Override
             public void run() {
-                for (int i = 0; i < 100; i++) counter++;
+                for (int i = 0; i < 100; i++) atomicInteger.getAndAdd(i); //counter++;
             }
         });
 
         Thread t2 = new Thread(new Runnable() {
             @Override
             public void run() {
-                for (int i = 0; i < 100; i++) counter++;
+                for (int i = 0; i < 100; i++) atomicInteger.getAndAdd(i); //counter++;
             }
         });
 

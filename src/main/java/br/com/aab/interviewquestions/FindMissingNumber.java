@@ -14,6 +14,12 @@ public class FindMissingNumber {
       param = new int[] {1, 2, 3};
       System.out.println(Arrays.toString(param) + " = " + find(param));
 
+      param = new int[] {0};
+      System.out.println(Arrays.toString(param) + " = " + find(param));
+
+      param = new int[] {1, 2};
+      System.out.println(Arrays.toString(param) + " = " + find(param));
+
       param = new int[] {2, 3, 4, 6, 7, 8};
       System.out.println(Arrays.toString(param) + " = " + find(param));
    }

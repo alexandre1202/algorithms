@@ -31,6 +31,7 @@ public class RemovingDuplicatedChars {
     }
 
     public String removingDuplicatedCharsUsingStream(String words) {
+
         return Arrays.asList(words.split("")).stream().distinct().collect(joining());
     }
 }

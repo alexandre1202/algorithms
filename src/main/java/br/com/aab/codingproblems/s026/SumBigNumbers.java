@@ -16,7 +16,13 @@ public class SumBigNumbers {
     }
 
     public int getSumIntegers() {
-        return Math.addExact(int1, int2);
+        int result = 0;
+        try {
+            result = Math.addExact(int1, int2);
+        } catch (ArithmeticException ae) {
+            throw new ArithmeticException(String.format("Overflow error has occured due to sum %d and %d", int1, int2));
+        }
+        return result;
     }
 
     public long getSumLongs() {

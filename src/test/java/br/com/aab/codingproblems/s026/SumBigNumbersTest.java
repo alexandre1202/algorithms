@@ -17,11 +17,12 @@ public class SumBigNumbersTest {
     }
 
     @Test
-    public void testSumIntegersWithOverflow() {
-        sumBigNumbers = new SumBigNumbers(Integer.MAX_VALUE - 1, 2);
-        assertThatThrownBy(() -> sumBigNumbers.getSumIntegers())
-                .isInstanceOf(ArithmeticException.class)
-                .hasMessage("integer overflow");
+    public void testSumOverflowIntegers() {
+        assertThatThrownBy(() -> {
+            SumBigNumbers sumBigNumbers = new SumBigNumbers(Integer.MAX_VALUE - 1, Integer.MAX_VALUE);
+            sumBigNumbers.getSumIntegers();
+        }).isInstanceOf(ArithmeticException.class)
+                .hasMessage("Overflow error has occured due to sum " + (Integer.MAX_VALUE - 1) + " and " + Integer.MAX_VALUE);
     }
 
     @Test
