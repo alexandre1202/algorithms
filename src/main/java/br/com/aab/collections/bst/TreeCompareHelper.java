@@ -1,5 +1,10 @@
 package br.com.aab.collections.bst;
 
+import java.util.Objects;
+
+import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
+
 public class TreeCompareHelper<T extends Comparable<T>> {
     public static void main(String[] args) {
         Tree<Integer> bst1 = new BinarySearchTree<Integer>() {{
@@ -24,10 +29,8 @@ public class TreeCompareHelper<T extends Comparable<T>> {
 
     public boolean compareTrees(Node<T> node1, Node<T> node2) {
 
-        //we have to check the base cases (it may be leaf node so we have to use ==)
-        if((node1==null && node2==null) || (node1==null && node2!=null) || (node1!=null && node2==null))
+        if((isNull(node1) && isNull(node2)) || (isNull(node1) && nonNull(node2)) || (nonNull(node1) && isNull(node2)))
             return node1==node2;
-
         //if the values within the nodes are not the same we return false (trees are not the same)
         if(node1.getData().compareTo(node2.getData())!=0) return false;
 
