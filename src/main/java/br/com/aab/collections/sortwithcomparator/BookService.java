@@ -1,14 +1,12 @@
 package br.com.aab.collections.sortwithcomparator;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
 public class BookService {
-    private Book book;
-    private List<Book> books = new ArrayList<>();
+    private List<Book> books;
 
     public BookService(List<Book> books) {
         this.books = books;

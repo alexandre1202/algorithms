@@ -1,7 +1,5 @@
 package br.com.aab.datastructures.linkedlist;
 
-import java.util.Arrays;
-
 public class MainTest {
 
   public static void main(String[] args) {
@@ -23,11 +21,23 @@ public class MainTest {
     list.insert(customer6);
     list.insert(customer7);
 
-    //    list.remove(customer3);
-    //    list.traverseList();
+    list.traverseList();
 
     Node<Customer> middleNode = list.getMiddleNode();
     System.out.println("middleNode = " + middleNode.getData());
+
+
+    List<Integer> integers = new LinkedList<>();
+    integers.insert(10);
+    integers.insert(2);
+    integers.insert(13);
+    integers.insert(5);
+
+    System.out.println("----- Before -----");
+    integers.traverseList();
+    integers.reverse();
+    System.out.println("\n----- After -----");
+    integers.traverseList();
   }
 
 }

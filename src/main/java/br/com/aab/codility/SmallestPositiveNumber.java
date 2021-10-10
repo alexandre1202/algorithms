@@ -12,9 +12,9 @@ public class SmallestPositiveNumber {
    }
 
    public int solution(int[] A) {
-      int result = 0;
       Arrays.sort(A);
-      for (int i = 0; i< A.length; i++) {
+      int result = 0;
+      for (int i = 0; i < A.length; i++) {
          if (A[i] >= 0 && A[i] > result) {
             if ((A[i] - result) > 1) {
                return ++result;
@@ -23,6 +23,6 @@ public class SmallestPositiveNumber {
             }
          }
       }
-      return result;
+      return result + 1;
    }
 }

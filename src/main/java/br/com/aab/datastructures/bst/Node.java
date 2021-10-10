@@ -1,6 +1,4 @@
-package br.com.aab.collections.bst;
-
-import java.util.Objects;
+package br.com.aab.datastructures.bst;
 
 public class Node<T> {
     private T data;
@@ -48,18 +46,5 @@ public class Node<T> {
     @Override
     public String toString() {
         return "" + data;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Node<?> node = (Node<?>) o;
-        return Objects.equals(data, node.data);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(data);
     }
 }

@@ -7,6 +7,7 @@ public class Main {
     public static void main(String[] args) {
 
         System.out.println("<<<<< Palindrome with Array >>>>>");
+        System.out.println(new Main().isPalindrome("dummy"));
         System.out.println(new Main().isPalindrome("Natan"));
         System.out.println(new Main().isPalindrome("I did did I"));
         System.out.println(new Main().isPalindrome("COVID19"));
@@ -24,28 +25,32 @@ public class Main {
         System.out.println(new Main().isPalindromeWithStringBuffer("COVID19"));
         System.out.println("---------------------------------");
 
-        int number1 = 5;
-        int number2 = 10;
+        double number1 = 5;
+        double number2 = 10;
         System.out.println("number1 % number2 = " + number1 % number2);
         System.out.println("number1 / number2 = " + number1 / number2);
 
     }
 
     private boolean isPalindrome(String palindrome) {
+        long begin = System.currentTimeMillis();
         char[] chars = palindrome.toLowerCase().toCharArray();
         int i1 = 0;
         int i2 = chars.length-1;
         while (i2 > i1) {
             if (chars[i2] != chars[i1]) {
+                this.showTime(begin, palindrome);
                 return false;
             }
             ++i1;
             --i2;
         }
+        this.showTime(begin, palindrome);
         return true;
     }
 
     private boolean isPalondromeWithLinkedList(String str) {
+        long begin = System.currentTimeMillis();
         LinkedList<Character> stack = new LinkedList<Character>();
         LinkedList<Character> queue = new LinkedList<Character>();
         String lowerCase = str.toLowerCase();
@@ -59,15 +64,25 @@ public class Main {
 
         while(!stack.isEmpty()) {
             if (!stack.poll().equals(queue.removeFirst())) {
+                this.showTime(begin, str);
                 return false;
             }
         }
-
+        this.showTime(begin, str);
         return true;
     }
 
     public boolean isPalindromeWithStringBuffer(String str) {
+        long begin = System.currentTimeMillis();
         str = str.toLowerCase();
-        return str.equals(new StringBuffer(str).reverse().toString());
+        boolean result = str.equals(new StringBuffer(str).reverse().toString());
+        this.showTime(begin, str);
+        return result;
+    }
+
+    private void showTime(Long begin, String input) {
+        System.out.printf("elapsed time for palindrome of [%s] is [%d] ms\n",
+                input,
+                (System.currentTimeMillis() - begin));
     }
 }

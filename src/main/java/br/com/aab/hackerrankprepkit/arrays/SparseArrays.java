@@ -22,7 +22,7 @@ public class SparseArrays {
         return result;
     }
 
-    public static List<Integer> matchingStringsLinkedList(List<String> strings, List<String> queries) {
+    public static List<Integer> matchingStringsLinkedListFastest(List<String> strings, List<String> queries) {
         List<Integer> result = new LinkedList<>();
         for (String q : queries) {
             Long count = strings.stream().filter(s -> q.equals(s)).count();
@@ -30,10 +30,17 @@ public class SparseArrays {
         }
         return result;
     }
-    public static List<Integer> matchingStringsFast(List<String> strings, List<String> queries) {
+
+    public static List<Integer> matchingStringsStream(List<String> strings, List<String> queries) {
         return queries.stream()
                 .mapToInt(q -> (int) (strings.stream().filter(s -> q.equals(s)).count()))
                 .boxed().collect(Collectors.toList());
+    }
+
+    public static List<Integer> matchingStringsStreamLinkedList(List<String> strings, List<String> queries) {
+        return queries.stream()
+                .mapToInt(q -> (int) (strings.stream().filter(s -> q.equals(s)).count()))
+                .boxed().collect(Collectors.toCollection(LinkedList::new));
     }
 
     public static void main(String[] args) {
@@ -43,13 +50,18 @@ public class SparseArrays {
                 (System.currentTimeMillis() - start)));
 
         start = System.currentTimeMillis();
-        System.out.println(format("matchingStringsFast(strings, queries) [%s] in [%d] ms",
-                matchingStringsFast(strings,queries),
+        System.out.println(format("matchingStringsStream(strings, queries) [%s] in [%d] ms",
+                matchingStringsStream(strings,queries),
                 (System.currentTimeMillis() - start)));
 
         start = System.currentTimeMillis();
-        System.out.println(format("matchingStringsLinkedList(strings, queries) [%s] in [%d] ms",
-                matchingStringsLinkedList(strings,queries),
+        System.out.println(format("matchingStringsLinkedListFastest(strings, queries) [%s] in [%d] ms",
+                matchingStringsLinkedListFastest(strings,queries),
+                (System.currentTimeMillis() - start)));
+
+        start = System.currentTimeMillis();
+        System.out.println(format("matchingStringsStreamLinkedList(strings, queries) [%s] in [%d] ms",
+                matchingStringsStreamLinkedList(strings,queries),
                 (System.currentTimeMillis() - start)));
 
     }

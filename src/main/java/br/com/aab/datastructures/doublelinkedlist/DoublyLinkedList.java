@@ -34,4 +34,25 @@ public class DoublyLinkedList<T extends Comparable<T>> {
       }
    }
 
+   public Node<T> getMiddleNode() {
+      Node<T> slowerNode = this.head;
+      Node<T> fasterNode = this.head;
+      while (fasterNode.getNext() != null && fasterNode.getNext().getNext() != null) {
+         slowerNode = slowerNode.getNext();
+         fasterNode = fasterNode.getNext().getNext();
+      }
+      return slowerNode;
+   }
+
+   public void reverseOrder() {
+      Node<T> currentlNode = head;
+      Node<T> previousNode = null;
+      Node<T> nextNode = null;
+      while (currentlNode != null) {
+         nextNode = currentlNode.getNext();
+         currentlNode.setNext(previousNode);
+         previousNode = currentlNode;
+         currentlNode = nextNode;
+      }
+   }
 }

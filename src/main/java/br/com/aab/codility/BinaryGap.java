@@ -2,6 +2,8 @@ package br.com.aab.codility;
 
 public class BinaryGap {
 
+    //https://app.codility.com/programmers/lessons/1-iterations/binary_gap/start/
+
     public int solutions(int n) {
         if (n < 1 || n > Integer.MAX_VALUE) return 0;
 
