@@ -2,6 +2,8 @@ package br.com.aab.codingproblems.s010;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class Permutation {
 
@@ -35,5 +37,19 @@ public class Permutation {
                 permuteAndPrint(prefix + word.charAt(i), word.substring(i + 1, n) + word.substring(0,i));
             }
         }
+    }
+
+    public static Stream<String> permuteAndReturnStream(String str) {
+
+        if (str == null || str.trim().length() == 0) {
+            return Stream.of("");
+        }
+
+        return IntStream.range(0, str.length())
+                .parallel()
+                .boxed()
+                .flatMap(i -> permuteAndReturnStream(str.substring(0, i) + str.substring(i + 1))
+                        .map(c -> str.charAt(i) + c)
+                );
     }
 }
