@@ -1,5 +1,6 @@
 package br.com.aab.codingproblems.s030;
 
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import org.junit.Test;
 
 import java.util.Arrays;
@@ -32,6 +33,12 @@ public class CheckingNullWithFunctionalProgrammingTest {
     public void testGetNameFromConcurrentMap() {
         String result = check.getNameFromMap(getCMap(), "LA");
         assertThat(result).isEqualTo("Louisiana");
+    }
+
+    @Test
+    public void testGetNameFromNullValue() {
+        String result = check.getNameFromMap(null, null);
+        //!!!! Adicionar um asert the Throw aqui
     }
 
     @Test

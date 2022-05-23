@@ -20,6 +20,10 @@ public class CountingDuplicatesChars {
         return map;
     }
 
+    public Map<Character, Long> countChars() {
+        return this.params.chars().mapToObj(c -> (char)c).collect(Collectors.groupingBy(c -> c, Collectors.counting()));
+    }
+
     public Map<Character, Long> count2() {
         return this.params.chars().mapToObj(c -> (char) c)
                        .collect(Collectors.groupingBy(c -> c, Collectors.counting()));

@@ -1,5 +1,6 @@
 package br.com.aab.codility;
 
+import br.com.aab.codility.iterations.BinaryGap;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.junit.MockitoJUnitRunner;

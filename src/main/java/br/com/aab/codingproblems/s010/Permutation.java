@@ -40,16 +40,10 @@ public class Permutation {
     }
 
     public static Stream<String> permuteAndReturnStream(String str) {
-
-        if (str == null || str.trim().length() == 0) {
+        if (str == null || str.trim().length() == 0)
             return Stream.of("");
-        }
-
-        return IntStream.range(0, str.length())
-                .parallel()
-                .boxed()
+        return IntStream.range(0, str.length()).boxed()
                 .flatMap(i -> permuteAndReturnStream(str.substring(0, i) + str.substring(i + 1))
-                        .map(c -> str.charAt(i) + c)
-                );
+                        .map(c -> str.charAt(i) + c));
     }
 }

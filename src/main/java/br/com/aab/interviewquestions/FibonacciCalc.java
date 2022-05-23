@@ -14,12 +14,10 @@ public class FibonacciCalc {
     }
 
     int[] getFibonacciSequenceFor(final int LIMIT) {
-        return Stream.iterate(new int[] {0, 1}, f -> new int[] {f[1], f[0] + f[1]})
+        return Stream.iterate(new int[] {0, 1}, s -> new int[] {s[1], s[1] + s[0]})
                 .limit(LIMIT)
-                .map(f -> f[0])
                 .collect(Collectors.toList())
-                .stream()
-                .mapToInt(f -> f)
+                .stream().mapToInt(f -> f[0])
                 .toArray();
     }
 

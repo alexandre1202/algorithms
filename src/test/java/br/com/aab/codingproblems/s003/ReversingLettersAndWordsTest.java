@@ -18,6 +18,14 @@ public class ReversingLettersAndWordsTest {
     }
 
     @Test
+    public void testReverseStringWithRecursivity() {
+        this.params = "Alexandre";
+        reversingLettersAndWords = new ReversingLettersAndWords(this.params);
+        assertThat(reversingLettersAndWords.reverseStringWithRecursivity(this.params))
+                .isEqualTo("erdnaxelA");
+    }
+
+    @Test
     public void testReversingLettersWithSuccess() {
         assertThat(reversingLettersAndWords.reversingLetters())
                 .isEqualTo("asse he esarf ahnim a");

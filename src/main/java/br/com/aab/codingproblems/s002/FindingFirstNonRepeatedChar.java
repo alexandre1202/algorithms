@@ -15,9 +15,26 @@ public class FindingFirstNonRepeatedChar {
         this.param = param;
     }
 
+    public String findNonRepeatedChar(final String input) {
+        Map<Integer, Long> countingChars = input.codePoints().mapToObj(c -> c)
+                .collect(groupingBy(identity(), LinkedHashMap::new, counting()));
+
+        return String.valueOf(Character.toChars(countingChars.entrySet().stream().filter(c -> c.getValue() == 1L).findFirst()
+                .map(Map.Entry::getKey)
+                .orElse(Integer.valueOf(Character.MIN_VALUE))));
+    }
+
+    public String findTheChar(final String input) {
+        Map<Integer, Long> charsCounted = input.codePoints().mapToObj(c -> c)
+                .collect(groupingBy(identity(), LinkedHashMap::new, counting()));
+        return String.valueOf(Character.toChars(charsCounted.entrySet().stream().filter(c -> c.getValue() == 1L)
+                .findFirst()
+                .map(Map.Entry::getKey)
+                .orElse(Integer.valueOf(Character.MIN_VALUE))));
+    }
     public String find() {
         Map<Integer, Long> mapChar = this.param.codePoints().mapToObj(c -> c)
-                .collect(groupingBy(identity(), LinkedHashMap::new,counting()));
+                .collect(groupingBy(identity(), LinkedHashMap::new, counting()));
         return String.valueOf(Character.toChars(mapChar.entrySet().stream().filter(c -> c.getValue() == 1L)
                 .findFirst()
                 .map(Map.Entry::getKey)

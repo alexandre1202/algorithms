@@ -1,4 +1,4 @@
-package br.com.aab.codility;
+package br.com.aab.codility.timecomplexity;
 
 public class FrogJump {
 

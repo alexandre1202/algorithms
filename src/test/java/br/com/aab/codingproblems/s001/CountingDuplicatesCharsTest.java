@@ -55,4 +55,11 @@ public class CountingDuplicatesCharsTest {
         Map<Character, Long> map = countingDuplicatesChars.count3WithoutStream();
         assertThat(map).extractingByKey('o').isEqualTo(5L);
     }
+
+    @Test
+    public void testCountChars() {
+        countingDuplicatesChars = new CountingDuplicatesChars("Alexandre");
+        Map<Character, Long> result = countingDuplicatesChars.countChars();
+        assertThat(result).extractingByKey('e').isEqualTo(2L);
+    }
 }

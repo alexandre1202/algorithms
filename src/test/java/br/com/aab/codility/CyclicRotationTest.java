@@ -1,6 +1,6 @@
 package br.com.aab.codility;
 
-import org.assertj.core.api.Assertions;
+import br.com.aab.codility.arrays.CyclicRotation;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.junit.MockitoJUnitRunner;

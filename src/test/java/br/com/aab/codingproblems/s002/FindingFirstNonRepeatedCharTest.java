@@ -31,4 +31,19 @@ public class FindingFirstNonRepeatedCharTest {
         Assertions.assertThat(foundChar).isEqualTo("X");
     }
 
+    @Test
+    public void testFindingTheCharX() {
+        String param = "AABBCCDDEEFFXZZ";
+        findingFirstNonRepeatedChar = new FindingFirstNonRepeatedChar(param);
+        String foundChar = findingFirstNonRepeatedChar.findNonRepeatedChar(param);
+        Assertions.assertThat(foundChar).isEqualTo("X");
+    }
+
+    @Test
+    public void testFindTheCharX() {
+        String param = "AABBCCDDEEFFXZZ";
+        findingFirstNonRepeatedChar = new FindingFirstNonRepeatedChar(param);
+        String foundChar = findingFirstNonRepeatedChar.findTheChar(param);
+        Assertions.assertThat(foundChar).isEqualTo("X");
+    }
 }

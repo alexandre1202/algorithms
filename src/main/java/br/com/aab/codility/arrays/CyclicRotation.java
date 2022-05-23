@@ -1,4 +1,4 @@
-package br.com.aab.codility;
+package br.com.aab.codility.arrays;
 
 import java.util.Arrays;
 import java.util.Collections;

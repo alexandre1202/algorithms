@@ -14,6 +14,14 @@ public class ReversingLettersAndWords {
         this.params = params;
     }
 
+    public String reverseStringWithRecursivity(String str){
+        if(str.isEmpty()){
+            return str;
+        }else{
+            return reverseStringWithRecursivity(str.substring(1))+str.charAt(0);
+        }
+    }
+
     public String reversingLetters() {
         char[] letters = this.params.toCharArray();
         char temp ;

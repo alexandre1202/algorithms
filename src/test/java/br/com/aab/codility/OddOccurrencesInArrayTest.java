@@ -1,5 +1,6 @@
 package br.com.aab.codility;
 
+import br.com.aab.codility.arrays.OddOccurrencesInArray;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
