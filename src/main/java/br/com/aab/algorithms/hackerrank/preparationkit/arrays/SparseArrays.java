@@ -1,4 +1,4 @@
-package br.com.aab.hackerrankprepkit.arrays;
+package br.com.aab.algorithms.hackerrank.preparationkit.arrays;
 
 import java.util.ArrayList;
 import java.util.Arrays;

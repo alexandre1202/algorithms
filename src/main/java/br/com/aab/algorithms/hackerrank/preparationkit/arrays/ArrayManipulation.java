@@ -1,10 +1,9 @@
-package br.com.aab.hackerrankprepkit.arrays;
+package br.com.aab.algorithms.hackerrank.preparationkit.arrays;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.*;
 
 public class ArrayManipulation {
 

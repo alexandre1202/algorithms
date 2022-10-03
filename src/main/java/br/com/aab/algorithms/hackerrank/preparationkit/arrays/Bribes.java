@@ -1,4 +1,4 @@
-package br.com.aab.hackerrankprepkit.arrays;
+package br.com.aab.algorithms.hackerrank.preparationkit.arrays;
 
 import java.util.Arrays;
 import java.util.stream.IntStream;

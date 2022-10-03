@@ -8,7 +8,7 @@ import java.util.Optional;
 import java.util.Queue;
 
 public class BreadthFirstSearch {
-    public List<String> listDirectory(final String path) {
+    public static List<String> listDirectory(final String path) {
         final List<String> result = new ArrayList<>();
         final Queue<File> fileQueue = new LinkedList<File>() {{ add(new File(path)); }};
 
