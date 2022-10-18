@@ -43,6 +43,8 @@ int[] intArray = {1, 0, 0, 4};
 ```  
 * [Java implementation](https://github.com/Alexandre1202/algorithms/blob/master/src/main/java/br/com/aab/challenge/ArraysChallenges.java)
 ------------------------------------------
+* [All content of the code in the package br.com.aab.codingproblems belongs to Java Coding Problems book by Anghel Leonard](https://github.com/alexandre1202/algorithms/tree/master/src/main/java/br/com/aab/codingproblems) 
+------------------------------------------
 # Unit tests framework comparation
 In this scenario of a wrong number in the unit test and I am taking advantage to show you to compare how each framework show the evaluation or assert in the console.
 
