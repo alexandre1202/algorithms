@@ -1,5 +1,5 @@
-# Java algorithm 
-If you are wondering about them try on the unit test in this [repo](https://github.com/Alexandre1202/algorithms) in src directory 
+# Java algorithms 
+I am sharing the code I did to solve code challenges and technical interview preparations as well as useful new techniques. Maybe you can enjoy the unit test in this [repo](https://github.com/Alexandre1202/algorithms) in src directory 
 ## Set up for MacOS
 ### [Git installation](https://gist.github.com/derhuerst/1b15ff4652a867391f03#file-mac-md)
 ### Clone this repository in your prefered workspace 
