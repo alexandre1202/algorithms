@@ -8,6 +8,11 @@ public class BSTImpl<T extends Comparable<T>> implements BST<T> {
     private Node<T> root;
 
     @Override
+    public Node<T> getRoot() {
+        return this.root;
+    }
+
+    @Override
     public void insert(T data) {
         if (isNull(data)) return;
         if (isNull(root)) {
