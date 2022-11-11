@@ -54,5 +54,4 @@ public class CheckingForPalindromeTest {
         boolean result = checkingForPalindrome.isPalindromeWithStringBuilder(expected);
         Assertions.assertTrue(result);
     }
-
 }
